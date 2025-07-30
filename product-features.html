@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hairyo 產品功能</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+        .tech-stack-item {
+            transition: all 0.3s ease;
+        }
+        .tech-stack-item:hover {
+            transform: scale(1.05);
+        }
+        .demo-phone {
+            background: linear-gradient(145deg, #1f2937, #374151);
+            border-radius: 25px;
+            padding: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .demo-screen {
+            background: #ffffff;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <section class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <i class="fas fa-cogs text-5xl mb-4 opacity-90"></i>
+                <h1 class="text-4xl font-bold mb-4">產品功能</h1>
+                <p class="text-xl opacity-90">創新技術驅動的美髮媒合平台</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-star mr-3 text-yellow-500"></i>核心功能特色
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- One-Click Website -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-magic text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">一鍵開站</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">10分鐘完成專業網站</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">無需技術背景</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">響應式設計</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">SEO優化</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Portfolio Showcase -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-images text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">作品展示</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">高質量圖片展示</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">分類管理</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">社群分享</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">客戶評價</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Smart Booking -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-calendar-alt text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">智能預約</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">即時預約系統</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">自動提醒通知</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">衝突避免</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">彈性調整</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Referral System -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-share-alt text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">推薦獎勵</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">多層級獎勵機制</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">即時返利</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">社群裂變</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">透明追蹤</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Salon Management -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-store text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">美髮店管理</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">設計師統一管理</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">預約統籌系統</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">電話預約支援</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">營運數據分析</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- AI Matching -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-brain text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">AI智能媒合</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">個人化推薦</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">風格匹配</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">地理位置優化</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-sm">學習優化</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Journey Demo -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-route mr-3 text-blue-600"></i>用戶體驗流程
+            </h2>
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Designer Journey -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-6 text-center text-blue-800">
+                        <i class="fas fa-cut mr-2"></i>設計師流程
+                    </h3>
+                    <div class="demo-phone mx-auto" style="width: 280px;">
+                        <div class="demo-screen p-4" style="height: 500px;">
+                            <!-- Mock Designer App Interface -->
+                            <div class="bg-blue-500 text-white p-3 rounded-t-lg mb-4">
+                                <div class="flex items-center justify-between">
+                                    <h4 class="font-bold">Hairyo 設計師</h4>
+                                    <i class="fas fa-user-circle text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="bg-gray-100 p-3 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-magic text-blue-500 mr-2"></i>
+                                        <span class="text-sm font-semibold">一鍵建立網站</span>
+                                    </div>
+                                    <p class="text-xs text-gray-600 mt-1">選擇模板，上傳作品</p>
+                                </div>
+                                <div class="bg-gray-100 p-3 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-images text-purple-500 mr-2"></i>
+                                        <span class="text-sm font-semibold">作品管理</span>
+                                    </div>
+                                    <p class="text-xs text-gray-600 mt-1">分類展示，客戶評價</p>
+                                </div>
+                                <div class="bg-gray-100 p-3 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-calendar text-green-500 mr-2"></i>
+                                        <span class="text-sm font-semibold">預約管理</span>
+                                    </div>
+                                    <p class="text-xs text-gray-600 mt-1">時間設定，自動提醒</p>
+                                </div>
+                                <div class="bg-gray-100 p-3 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-share-alt text-red-500 mr-2"></i>
+                                        <span class="text-sm font-semibold">推薦獲利</span>
+                                    </div>
+                                    <p class="text-xs text-gray-600 mt-1">邀請同行，賺取佣金</p>
+                                </div>
+                                <div class="bg-blue-500 text-white p-3 rounded-lg text-center">
+                                    <span class="text-sm font-bold">開始營業</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consumer Journey -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-6 text-center text-green-800">
+                        <i class="fas fa-user mr-2"></i>消費者流程
+                    </h3>
+                    <div class="demo-phone mx-auto" style="width: 280px;">
+                        <div class="demo-screen p-4" style="height: 500px;">
+                            <!-- Mock Consumer App Interface -->
+                            <div class="bg-green-500 text-white p-3 rounded-t-lg mb-4">
+                                <div class="flex items-center justify-between">
+                                    <h4 class="font-bold">Hairyo 客戶</h4>
+                                    <i class="fas fa-search text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="bg-gray-100 p-3 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-search text-blue-500 mr-2"></i>
+                                        <span class="text-sm font-semibold">搜尋設計師</span>
+                                    </div>
+                                    <p class="text-xs text-gray-600 mt-1">地點、風格、價格篩選</p>
+                                </div>
+                                <div class="bg-gray-100 p-3 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-images text-purple-500 mr-2"></i>
+                                        <span class="text-sm font-semibold">瀏覽作品</span>
+                                    </div>
+                                    <p class="text-xs text-gray-600 mt-1">查看作品集，客戶評價</p>
+                                </div>
+                                <div class="bg-gray-100 p-3 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-calendar-check text-green-500 mr-2"></i>
+                                        <span class="text-sm font-semibold">線上預約</span>
+                                    </div>
+                                    <p class="text-xs text-gray-600 mt-1">選擇時間，確認服務</p>
+                                </div>
+                                <div class="bg-gray-100 p-3 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-star text-yellow-500 mr-2"></i>
+                                        <span class="text-sm font-semibold">服務評價</span>
+                                    </div>
+                                    <p class="text-xs text-gray-600 mt-1">完成服務，留下評價</p>
+                                </div>
+                                <div class="bg-green-500 text-white p-3 rounded-lg text-center">
+                                    <span class="text-sm font-bold">完美造型</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Salon Manager Journey -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-6 text-center text-purple-800">
+                        <i class="fas fa-store mr-2"></i>美髮店流程
+                    </h3>
+                    <div class="demo-phone mx-auto" style="width: 280px;">
+                        <div class="demo-screen p-4" style="height: 500px;">
+                            <!-- Mock Salon Manager Interface -->
+                            <div class="bg-purple-500 text-white p-3 rounded-t-lg mb-4">
+                                <div class="flex items-center justify-between">
+                                    <h4 class="font-bold">Hairyo 店家</h4>
+                                    <i class="fas fa-cog text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="bg-gray-100 p-3 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-store text-blue-500 mr-2"></i>
+                                        <span class="text-sm font-semibold">店面設定</span>
+                                    </div>
+                                    <p class="text-xs text-gray-600 mt-1">基本資訊，營業時間</p>
+                                </div>
+                                <div class="bg-gray-100 p-3 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-users text-green-500 mr-2"></i>
+                                        <span class="text-sm font-semibold">設計師管理</span>
+                                    </div>
+                                    <p class="text-xs text-gray-600 mt-1">邀請設計師，權限設定</p>
+                                </div>
+                                <div class="bg-gray-100 p-3 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-calendar-alt text-purple-500 mr-2"></i>
+                                        <span class="text-sm font-semibold">統一預約</span>
+                                    </div>
+                                    <p class="text-xs text-gray-600 mt-1">查看所有預約，電話安排</p>
+                                </div>
+                                <div class="bg-gray-100 p-3 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-chart-bar text-red-500 mr-2"></i>
+                                        <span class="text-sm font-semibold">營運分析</span>
+                                    </div>
+                                    <p class="text-xs text-gray-600 mt-1">業績報表，數據洞察</p>
+                                </div>
+                                <div class="bg-purple-500 text-white p-3 rounded-lg text-center">
+                                    <span class="text-sm font-bold">高效營運</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Architecture -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-code mr-3 text-green-600"></i>技術架構
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">核心技術棧</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="tech-stack-item bg-blue-50 p-4 rounded-lg text-center">
+                            <i class="fab fa-react text-3xl text-blue-500 mb-2"></i>
+                            <h4 class="font-semibold text-gray-800">React Native</h4>
+                            <p class="text-xs text-gray-600">跨平台開發</p>
+                        </div>
+                        <div class="tech-stack-item bg-green-50 p-4 rounded-lg text-center">
+                            <i class="fab fa-node-js text-3xl text-green-500 mb-2"></i>
+                            <h4 class="font-semibold text-gray-800">Node.js</h4>
+                            <p class="text-xs text-gray-600">後端服務</p>
+                        </div>
+                        <div class="tech-stack-item bg-purple-50 p-4 rounded-lg text-center">
+                            <i class="fas fa-database text-3xl text-purple-500 mb-2"></i>
+                            <h4 class="font-semibold text-gray-800">MongoDB</h4>
+                            <p class="text-xs text-gray-600">數據存儲</p>
+                        </div>
+                        <div class="tech-stack-item bg-red-50 p-4 rounded-lg text-center">
+                            <i class="fab fa-aws text-3xl text-red-500 mb-2"></i>
+                            <h4 class="font-semibold text-gray-800">AWS</h4>
+                            <p class="text-xs text-gray-600">雲端部署</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">系統特色</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-rocket text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">高性能架構</h4>
+                                <p class="text-gray-600 text-sm">微服務架構，支援高併發訪問</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-shield-alt text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">安全保障</h4>
+                                <p class="text-gray-600 text-sm">端到端加密，數據安全防護</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-expand-arrows-alt text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">彈性擴展</h4>
+                                <p class="text-gray-600 text-sm">容器化部署，自動擴縮容</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-brain text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">AI驅動</h4>
+                                <p class="text-gray-600 text-sm">機器學習推薦，智能媒合</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innovation Highlights -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-lightbulb mr-3 text-yellow-500"></i>創新亮點
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-magic text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800">零技術門檻</h3>
+                    <p class="text-gray-600 text-sm">革命性的一鍵開站技術，讓每個設計師都能擁有專業網站</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-share-alt text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800">病毒式增長</h3>
+                    <p class="text-gray-600 text-sm">創新的多層級推薦機制，實現平台用戶的指數級增長</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-store text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800">店面整合</h3>
+                    <p class="text-gray-600 text-sm">首創美髮店統一管理系統，支援電話預約和人員流動</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-brain text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800">AI智能媒合</h3>
+                    <p class="text-gray-600 text-sm">深度學習算法，精準匹配消費者需求與設計師專長</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Roadmap -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-road mr-3 text-blue-600"></i>功能發展路線
+            </h2>
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-300 h-full"></div>
+                
+                <!-- MVP Phase -->
+                <div class="relative flex items-center mb-12">
+                    <div class="w-1/2 pr-8 text-right">
+                        <div class="bg-blue-50 p-6 rounded-xl">
+                            <h3 class="text-xl font-bold text-blue-800 mb-3">MVP 階段</h3>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• 一鍵開站功能</li>
+                                <li>• 基礎預約系統</li>
+                                <li>• 作品展示</li>
+                                <li>• 用戶註冊登入</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">1</span>
+                    </div>
+                    <div class="w-1/2 pl-8">
+                        <div class="text-sm text-gray-500">
+                            <strong>3個月</strong><br>
+                            核心功能驗證
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Growth Phase -->
+                <div class="relative flex items-center mb-12">
+                    <div class="w-1/2 pr-8 text-right">
+                        <div class="text-sm text-gray-500">
+                            <strong>6個月</strong><br>
+                            功能完善優化
+                        </div>
+                    </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">2</span>
+                    </div>
+                    <div class="w-1/2 pl-8">
+                        <div class="bg-green-50 p-6 rounded-xl">
+                            <h3 class="text-xl font-bold text-green-800 mb-3">成長階段</h3>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• 推薦獎勵系統</li>
+                                <li>• 美髮店管理</li>
+                                <li>• 進階預約功能</li>
+                                <li>• 客戶評價系統</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Platform Phase -->
+                <div class="relative flex items-center">
+                    <div class="w-1/2 pr-8 text-right">
+                        <div class="bg-purple-50 p-6 rounded-xl">
+                            <h3 class="text-xl font-bold text-purple-800 mb-3">平台階段</h3>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• AI智能推薦</li>
+                                <li>• 數據分析平台</li>
+                                <li>• 生態系統建立</li>
+                                <li>• 國際化擴展</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">3</span>
+                    </div>
+                    <div class="w-1/2 pl-8">
+                        <div class="text-sm text-gray-500">
+                            <strong>12個月</strong><br>
+                            智能媒合平台
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

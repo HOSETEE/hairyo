@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hairyo 市場分析</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <section class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <i class="fas fa-chart-bar text-5xl mb-4 opacity-90"></i>
+                <h1 class="text-4xl font-bold mb-4">市場分析</h1>
+                <p class="text-xl opacity-90">台灣美髮市場深度分析與競爭格局</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Size -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-globe mr-3 text-blue-600"></i>市場規模與增長
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="space-y-8">
+                        <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 rounded-xl">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-2xl font-bold">400億台幣</h3>
+                                    <p class="opacity-90">台灣美髮市場總規模</p>
+                                </div>
+                                <i class="fas fa-dollar-sign text-4xl opacity-80"></i>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-xl">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-2xl font-bold">2萬家</h3>
+                                    <p class="opacity-90">美髮沙龍總數量</p>
+                                </div>
+                                <i class="fas fa-store text-4xl opacity-80"></i>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-6 rounded-xl">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-2xl font-bold">15-20%</h3>
+                                    <p class="opacity-90">數位化需求年增長率</p>
+                                </div>
+                                <i class="fas fa-trending-up text-4xl opacity-80"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">市場增長趨勢</h3>
+                        <canvas id="marketGrowthChart" width="400" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Trends -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-chart-line mr-3 text-green-600"></i>行業趨勢分析
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user-cog text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3 text-gray-800">個人化服務</h3>
+                        <p class="text-gray-600 text-sm">消費者對個人化美髮服務需求持續增加，追求獨特風格</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-share-alt text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3 text-gray-800">社群影響力</h3>
+                        <p class="text-gray-600 text-sm">Instagram、TikTok等社群媒體成為美髮趨勢主要推動力</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-mobile-alt text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3 text-gray-800">線上預約</h3>
+                        <p class="text-gray-600 text-sm">消費者對線上預約接受度大幅提升，特別是年輕族群</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-briefcase text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3 text-gray-800">獨立工作者</h3>
+                        <p class="text-gray-600 text-sm">獨立美髮師數量持續增長，需要專業的數位工具支援</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitive Analysis -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-chess mr-3 text-purple-600"></i>競爭格局分析
+            </h2>
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white rounded-xl shadow-lg overflow-hidden">
+                    <thead class="bg-gray-800 text-white">
+                        <tr>
+                            <th class="px-6 py-4 text-left">競爭對手</th>
+                            <th class="px-6 py-4 text-center">一鍵開站</th>
+                            <th class="px-6 py-4 text-center">作品展示</th>
+                            <th class="px-6 py-4 text-center">線上預約</th>
+                            <th class="px-6 py-4 text-center">本土化</th>
+                            <th class="px-6 py-4 text-center">推薦獎勵</th>
+                            <th class="px-6 py-4 text-center">定價模式</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-200 bg-blue-50">
+                            <td class="px-6 py-4 font-bold text-blue-800">
+                                <i class="fas fa-cut mr-2"></i>Hairyo
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-check text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-check text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-check text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-check text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-check text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center text-sm">
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded">免費+抽成</span>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <td class="px-6 py-4 font-semibold">StyleSeat (國際)</td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-times text-red-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-check text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-check text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-times text-red-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-times text-red-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center text-sm">
+                                <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded">月費制</span>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <td class="px-6 py-4 font-semibold">本土平台A</td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-times text-red-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-check text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-check text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-check text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-times text-red-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center text-sm">
+                                <span class="bg-red-100 text-red-800 px-2 py-1 rounded">抽成制</span>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <td class="px-6 py-4 font-semibold">Instagram</td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-times text-red-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-check text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-times text-red-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-check text-green-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center">
+                                <i class="fas fa-times text-red-500 text-xl"></i>
+                            </td>
+                            <td class="px-6 py-4 text-center text-sm">
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">免費</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Opportunity -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-bullseye mr-3 text-red-600"></i>市場機會分析
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">市場空白點</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-exclamation text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">技術門檻過高</h4>
+                                <p class="text-gray-600 text-sm">現有平台需要技術背景才能建立專業網站</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-exclamation text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">缺乏推薦機制</h4>
+                                <p class="text-gray-600 text-sm">沒有有效的用戶增長和推薦獎勵系統</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-exclamation text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">本土化不足</h4>
+                                <p class="text-gray-600 text-sm">國際平台缺乏台灣市場的深度理解</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-exclamation text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">美髮店管理缺失</h4>
+                                <p class="text-gray-600 text-sm">缺乏針對美髮店統一管理的解決方案</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Hairyo 解決方案</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">一鍵開站技術</h4>
+                                <p class="text-gray-600 text-sm">10分鐘內完成專業網站建立，無需技術背景</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">創新推薦獎勵</h4>
+                                <p class="text-gray-600 text-sm">多層級推薦獎勵機制，促進平台病毒式增長</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">深度本土化</h4>
+                                <p class="text-gray-600 text-sm">專為台灣市場設計，理解在地需求和習慣</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">美髮店管理系統</h4>
+                                <p class="text-gray-600 text-sm">統一預約管理，支援電話預約和人員流動</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Entry Strategy -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-rocket mr-3 text-blue-600"></i>市場進入策略
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-white">1</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800">階段一：MVP驗證</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 mr-2"></i>
+                            <span class="text-sm">台北市重點區域試點</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 mr-2"></i>
+                            <span class="text-sm">100位種子設計師</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 mr-2"></i>
+                            <span class="text-sm">驗證核心功能</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 mr-2"></i>
+                            <span class="text-sm">收集用戶反饋</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-white">2</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-green-800">階段二：區域擴展</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-sm">擴展至六都</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-sm">1000位活躍設計師</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-sm">功能完善優化</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-sm">建立品牌知名度</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-white">3</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-purple-800">階段三：平台化</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 mr-2"></i>
+                            <span class="text-sm">全台覆蓋</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 mr-2"></i>
+                            <span class="text-sm">智能媒合平台</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 mr-2"></i>
+                            <span class="text-sm">生態系統建立</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 mr-2"></i>
+                            <span class="text-sm">海外市場拓展</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Market Growth Chart
+        const ctx = document.getElementById('marketGrowthChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2020', '2021', '2022', '2023', '2024', '2025', '2026'],
+                datasets: [{
+                    label: '數位化預約市場規模 (億台幣)',
+                    data: [20, 25, 32, 40, 50, 62, 75],
+                    borderColor: 'rgb(59, 130, 246)',
+                    backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }, {
+                    label: '傳統預約市場規模 (億台幣)',
+                    data: [380, 375, 368, 360, 350, 338, 325],
+                    borderColor: 'rgb(156, 163, 175)',
+                    backgroundColor: 'rgba(156, 163, 175, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: '台灣美髮預約市場數位化趨勢'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: '市場規模 (億台幣)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: '年份'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

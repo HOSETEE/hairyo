@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hairyo 商業模式</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .revenue-card {
+            transition: all 0.3s ease;
+        }
+        .revenue-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .metric-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .growth-card {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        .profit-card {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <section class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <i class="fas fa-chart-line text-5xl mb-4 opacity-90"></i>
+                <h1 class="text-4xl font-bold mb-4">商業模式</h1>
+                <p class="text-xl opacity-90">可持續發展的營收策略與財務規劃</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Revenue Model -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-dollar-sign mr-3 text-green-600"></i>營收模式
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Transaction Fee -->
+                <div class="revenue-card bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-percentage text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">交易抽成</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-600">抽成比例</span>
+                            <span class="font-bold text-green-600">5-8%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-600">主要來源</span>
+                            <span class="font-bold text-gray-800">服務費用</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-600">預期佔比</span>
+                            <span class="font-bold text-blue-600">60%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium Features -->
+                <div class="revenue-card bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-crown text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">進階功能</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-600">月費方案</span>
+                            <span class="font-bold text-blue-600">$299-999</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-600">主要功能</span>
+                            <span class="font-bold text-gray-800">數據分析</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-600">預期佔比</span>
+                            <span class="font-bold text-blue-600">25%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advertising -->
+                <div class="revenue-card bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-bullhorn text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">廣告收入</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-600">推廣費用</span>
+                            <span class="font-bold text-purple-600">$500-2000</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-600">主要客戶</span>
+                            <span class="font-bold text-gray-800">美髮品牌</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-600">預期佔比</span>
+                            <span class="font-bold text-blue-600">10%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partnership -->
+                <div class="revenue-card bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-handshake text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">合作分潤</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-600">合作夥伴</span>
+                            <span class="font-bold text-red-600">美髮學院</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-600">分潤模式</span>
+                            <span class="font-bold text-gray-800">課程推薦</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-600">預期佔比</span>
+                            <span class="font-bold text-blue-600">5%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Projections -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-chart-bar mr-3 text-blue-600"></i>財務預測
+            </h2>
+            <div class="grid lg:grid-cols-3 gap-8 mb-12">
+                <!-- Revenue Projection -->
+                <div class="metric-card text-white p-8 rounded-xl">
+                    <div class="text-center">
+                        <i class="fas fa-arrow-up text-4xl mb-4 opacity-90"></i>
+                        <h3 class="text-2xl font-bold mb-2">營收預測</h3>
+                        <div class="text-4xl font-bold mb-2">$2.5億</div>
+                        <p class="opacity-90">第三年年營收目標</p>
+                    </div>
+                </div>
+
+                <!-- User Growth -->
+                <div class="growth-card text-white p-8 rounded-xl">
+                    <div class="text-center">
+                        <i class="fas fa-users text-4xl mb-4 opacity-90"></i>
+                        <h3 class="text-2xl font-bold mb-2">用戶增長</h3>
+                        <div class="text-4xl font-bold mb-2">10萬+</div>
+                        <p class="opacity-90">活躍設計師數量</p>
+                    </div>
+                </div>
+
+                <!-- Profit Margin -->
+                <div class="profit-card text-white p-8 rounded-xl">
+                    <div class="text-center">
+                        <i class="fas fa-percentage text-4xl mb-4 opacity-90"></i>
+                        <h3 class="text-2xl font-bold mb-2">利潤率</h3>
+                        <div class="text-4xl font-bold mb-2">35%</div>
+                        <p class="opacity-90">成熟期毛利率</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Revenue Chart -->
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-6 text-gray-800 text-center">三年營收預測</h3>
+                <canvas id="revenueChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Strategy -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-chess mr-3 text-purple-600"></i>市場策略
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Go-to-Market Strategy -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">市場進入策略</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-white font-bold">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2">種子用戶獲取</h4>
+                                <p class="text-gray-600 text-sm">透過美髮學院、設計師社群、美髮展會等管道，獲取首批100位種子設計師</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-white font-bold">2</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2">病毒式推廣</h4>
+                                <p class="text-gray-600 text-sm">利用推薦獎勵機制，鼓勵現有用戶邀請新用戶，實現指數級增長</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-white font-bold">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2">數位行銷</h4>
+                                <p class="text-gray-600 text-sm">透過社群媒體、內容行銷、KOL合作等方式，提升品牌知名度</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-white font-bold">4</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2">策略合作</h4>
+                                <p class="text-gray-600 text-sm">與美髮品牌、美髮學院、連鎖沙龍建立合作關係，擴大市場覆蓋</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Competitive Advantages -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">競爭優勢</h3>
+                    <div class="space-y-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-magic text-blue-500 mr-3"></i>
+                                <h4 class="font-bold text-blue-800">技術創新</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">一鍵開站技術降低進入門檻，讓設計師專注於專業服務</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-share-alt text-green-500 mr-3"></i>
+                                <h4 class="font-bold text-green-800">增長機制</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">創新推薦獎勵系統，實現平台用戶的自然增長</p>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-store text-purple-500 mr-3"></i>
+                                <h4 class="font-bold text-purple-800">生態整合</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">支援美髮店管理，滿足不同經營模式的需求</p>
+                        </div>
+                        <div class="bg-red-50 p-4 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-heart text-red-500 mr-3"></i>
+                                <h4 class="font-bold text-red-800">本土化</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">深度理解台灣市場，提供在地化的解決方案</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Highlights -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-gem mr-3 text-yellow-500"></i>投資亮點
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Market Size -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-globe text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">龐大市場</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>400億台幣市場規模</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>2萬家美髮沙龍</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>數位化需求快速增長</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Scalable Model -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-expand-arrows-alt text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">可擴展性</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>輕資產商業模式</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>邊際成本遞減</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>網路效應明顯</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Strong Team -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">優秀團隊</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>豐富產業經驗</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>技術創新能力</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>執行力強</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Clear Path -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-road text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">清晰路徑</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>明確發展階段</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>可衡量里程碑</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>風險控制機制</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Innovation -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-lightbulb text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">技術創新</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>一鍵開站技術</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>AI智能媒合</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>創新推薦機制</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Exit Strategy -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-rocket text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">退出策略</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>IPO 上市計劃</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>策略併購機會</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>國際擴展潛力</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funding Requirements -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-money-bill-wave mr-3 text-green-600"></i>資金需求
+            </h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Funding Breakdown -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">資金用途分配</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between p-4 bg-blue-50 rounded-lg">
+                                <div class="flex items-center">
+                                    <i class="fas fa-code text-blue-500 mr-3"></i>
+                                    <span class="font-semibold text-gray-800">技術開發</span>
+                                </div>
+                                <span class="font-bold text-blue-600">40%</span>
+                            </div>
+                            <div class="flex items-center justify-between p-4 bg-green-50 rounded-lg">
+                                <div class="flex items-center">
+                                    <i class="fas fa-bullhorn text-green-500 mr-3"></i>
+                                    <span class="font-semibold text-gray-800">市場推廣</span>
+                                </div>
+                                <span class="font-bold text-green-600">30%</span>
+                            </div>
+                            <div class="flex items-center justify-between p-4 bg-purple-50 rounded-lg">
+                                <div class="flex items-center">
+                                    <i class="fas fa-users text-purple-500 mr-3"></i>
+                                    <span class="font-semibold text-gray-800">團隊建設</span>
+                                </div>
+                                <span class="font-bold text-purple-600">20%</span>
+                            </div>
+                            <div class="flex items-center justify-between p-4 bg-red-50 rounded-lg">
+                                <div class="flex items-center">
+                                    <i class="fas fa-cogs text-red-500 mr-3"></i>
+                                    <span class="font-semibold text-gray-800">營運資金</span>
+                                </div>
+                                <span class="font-bold text-red-600">10%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestones -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">關鍵里程碑</h3>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <h4 class="font-bold text-gray-800">6個月</h4>
+                                <p class="text-gray-600 text-sm">MVP上線，獲得1000位種子用戶</p>
+                            </div>
+                            <div class="border-l-4 border-green-500 pl-4">
+                                <h4 class="font-bold text-gray-800">12個月</h4>
+                                <p class="text-gray-600 text-sm">擴展至六都，達到10000位活躍用戶</p>
+                            </div>
+                            <div class="border-l-4 border-purple-500 pl-4">
+                                <h4 class="font-bold text-gray-800">18個月</h4>
+                                <p class="text-gray-600 text-sm">實現營收平衡，月營收達500萬</p>
+                            </div>
+                            <div class="border-l-4 border-red-500 pl-4">
+                                <h4 class="font-bold text-gray-800">24個月</h4>
+                                <p class="text-gray-600 text-sm">準備A輪融資，拓展海外市場</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Funding Amount -->
+                <div class="mt-12 text-center">
+                    <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-8 rounded-xl inline-block">
+                        <h3 class="text-2xl font-bold mb-4">種子輪融資需求</h3>
+                        <div class="text-5xl font-bold mb-2">$5,000萬</div>
+                        <p class="text-lg opacity-90">18個月營運資金</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Revenue Projection Chart
+        const ctx = document.getElementById('revenueChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Year 1', 'Year 2', 'Year 3'],
+                datasets: [{
+                    label: '交易抽成 (百萬)',
+                    data: [5, 45, 150],
+                    backgroundColor: 'rgba(34, 197, 94, 0.8)',
+                    borderColor: 'rgba(34, 197, 94, 1)',
+                    borderWidth: 1
+                }, {
+                    label: '進階功能 (百萬)',
+                    data: [2, 18, 62],
+                    backgroundColor: 'rgba(59, 130, 246, 0.8)',
+                    borderColor: 'rgba(59, 130, 246, 1)',
+                    borderWidth: 1
+                }, {
+                    label: '廣告收入 (百萬)',
+                    data: [0, 5, 25],
+                    backgroundColor: 'rgba(147, 51, 234, 0.8)',
+                    borderColor: 'rgba(147, 51, 234, 1)',
+                    borderWidth: 1
+                }, {
+                    label: '合作分潤 (百萬)',
+                    data: [0, 2, 13],
+                    backgroundColor: 'rgba(239, 68, 68, 0.8)',
+                    borderColor: 'rgba(239, 68, 68, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: '營收結構預測 (台幣)'
+                    }
+                },
+                scales: {
+                    x: {
+                        stacked: true,
+                    },
+                    y: {
+                        stacked: true,
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: '營收 (百萬台幣)'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hairyo 項目概覽</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .feature-icon {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="mb-8">
+                    <i class="fas fa-cut text-6xl mb-4 opacity-90"></i>
+                    <h1 class="text-5xl font-bold mb-4">Hairyo</h1>
+                    <p class="text-2xl mb-6 opacity-90">讓對的設計師更靠近你</p>
+                    <div class="bg-white bg-opacity-20 inline-block px-6 py-3 rounded-full">
+                        <span class="text-lg font-semibold">台灣首創美髮媒合平台</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Stats -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-chart-line mr-3 text-blue-600"></i>市場機會
+            </h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="stat-card text-white p-6 rounded-xl mb-4">
+                        <i class="fas fa-dollar-sign text-3xl mb-2"></i>
+                        <div class="text-2xl font-bold">400億</div>
+                        <div class="text-sm opacity-90">台幣</div>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">台灣美髮市場規模</h3>
+                </div>
+                <div class="text-center">
+                    <div class="stat-card text-white p-6 rounded-xl mb-4">
+                        <i class="fas fa-store text-3xl mb-2"></i>
+                        <div class="text-2xl font-bold">2萬家</div>
+                        <div class="text-sm opacity-90">沙龍</div>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">美髮沙龍數量</h3>
+                </div>
+                <div class="text-center">
+                    <div class="stat-card text-white p-6 rounded-xl mb-4">
+                        <i class="fas fa-mobile-alt text-3xl mb-2"></i>
+                        <div class="text-2xl font-bold">15-20%</div>
+                        <div class="text-sm opacity-90">年增長</div>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">數位化預約需求</h3>
+                </div>
+                <div class="text-center">
+                    <div class="stat-card text-white p-6 rounded-xl mb-4">
+                        <i class="fas fa-users text-3xl mb-2"></i>
+                        <div class="text-2xl font-bold">持續增長</div>
+                        <div class="text-sm opacity-90">趨勢</div>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">獨立設計師數量</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-star mr-3 text-yellow-500"></i>核心價值主張
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-mouse-pointer text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3 text-gray-800">一鍵開站</h3>
+                    <p class="text-gray-600 text-center">美髮師無需技術背景即可快速建立專屬網站，10分鐘內完成專業形象建立</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-calendar-check text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3 text-gray-800">智能預約</h3>
+                    <p class="text-gray-600 text-center">自動化排程系統，減少溝通成本，即時更新可預約時間，避免衝突</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-images text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3 text-gray-800">作品展示</h3>
+                    <p class="text-gray-600 text-center">完整的作品集展示功能，提升設計師專業形象，增加預約轉換率</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-handshake text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3 text-gray-800">智能媒合</h3>
+                    <p class="text-gray-600 text-center">後期發展為綜合媒合平台，透過AI技術精準配對設計師與客戶</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Users -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-users mr-3 text-green-600"></i>目標用戶群體
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 美髮設計師 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-cut text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-blue-800">美髮設計師</h3>
+                        <p class="text-blue-600 mt-2">25-45歲 | 月收入3-15萬</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
+                            <span class="text-gray-700">提升工作效率</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
+                            <span class="text-gray-700">建立專業形象</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
+                            <span class="text-gray-700">增加客戶數量</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
+                            <span class="text-gray-700">穩定收入來源</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 美髮店管理者 -->
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-store text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-purple-800">美髮店管理者</h3>
+                        <p class="text-purple-600 mt-2">30-55歲 | 月收入5-30萬</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-500 mr-3"></i>
+                            <span class="text-gray-700">統一預約管理</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-500 mr-3"></i>
+                            <span class="text-gray-700">提升營運效率</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-500 mr-3"></i>
+                            <span class="text-gray-700">掌握營運數據</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-500 mr-3"></i>
+                            <span class="text-gray-700">人員流動管理</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 消費者 -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-green-800">消費者</h3>
+                        <p class="text-green-600 mt-2">20-50歲 | 以女性為主70%</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span class="text-gray-700">找到技術好的設計師</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span class="text-gray-700">便利的預約體驗</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span class="text-gray-700">透明的價格資訊</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span class="text-gray-700">滿意的服務結果</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitive Advantages -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-trophy mr-3 text-yellow-500"></i>競爭優勢
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-rocket text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">專注美髮垂直領域</h3>
+                                <p class="text-gray-600">深度理解美髮行業需求，提供專業化解決方案</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-magic text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">一鍵開站降低門檻</h3>
+                                <p class="text-gray-600">無需技術背景，10分鐘內完成專業網站建立</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-gift text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">推薦獎勵機制</h3>
+                                <p class="text-gray-600">創新的推薦獎勵系統，促進平台病毒式擴散</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">本土化設計服務</h3>
+                                <p class="text-gray-600">深度理解台灣市場，提供在地化的設計和服務</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="美髮沙龍" class="rounded-xl shadow-lg w-full">
+                    <!-- 圖片來源: Unsplash - 現代美髮沙龍 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Highlights -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                <i class="fas fa-lightbulb mr-3 text-yellow-500"></i>投資亮點
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-xl">
+                    <i class="fas fa-chart-line text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">巨大市場潛力</h3>
+                    <p class="opacity-90">400億台幣市場規模，數位化轉型需求強勁，年增長率15-20%</p>
+                </div>
+                <div class="bg-gradient-to-br from-green-500 to-green-600 text-white p-6 rounded-xl">
+                    <i class="fas fa-cogs text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">技術壁壘</h3>
+                    <p class="opacity-90">一鍵開站技術、智能預約系統、AI媒合算法形成競爭壁壘</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-6 rounded-xl">
+                    <i class="fas fa-users text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">網絡效應</h3>
+                    <p class="opacity-90">推薦獎勵機制促進用戶增長，平台價值隨用戶數量指數級增長</p>
+                </div>
+                <div class="bg-gradient-to-br from-red-500 to-red-600 text-white p-6 rounded-xl">
+                    <i class="fas fa-dollar-sign text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">多元營收模式</h3>
+                    <p class="opacity-90">從免費開站到功能收費，最終發展為平台抽成模式</p>
+                </div>
+                <div class="bg-gradient-to-br from-yellow-500 to-yellow-600 text-white p-6 rounded-xl">
+                    <i class="fas fa-rocket text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">快速擴展能力</h3>
+                    <p class="opacity-90">標準化產品易於複製，可快速擴展至其他城市和國家</p>
+                </div>
+                <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 text-white p-6 rounded-xl">
+                    <i class="fas fa-shield-alt text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">風險控制</h3>
+                    <p class="opacity-90">分階段發展策略，MVP驗證後再投入，降低投資風險</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
